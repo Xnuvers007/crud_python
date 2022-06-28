@@ -27,7 +27,7 @@ import os
 if not sys.version_info.major==3 and sys.version_info.minor >= 6:
     print("you need to upgrade your python version to up > 3.6") # Attention
     os.system("xdg-open https://python.org/download") # If you use python < 3.6 you need to download it
-    sys.exit(1) # exit if you not use python 3.56 >
+    sys.exit(1) # exit if you not use python > 3.6 
 
 # try to import module
 try:
@@ -203,7 +203,7 @@ while lanjut: # do looping
     if (lanjut == "y" or lanjut == "Y"): # if lanjutkan/continue is y or Y
         lanjut = True # boolean true for while
     elif (lanjut == "n" or lanjut == "N"): # if lanjutkan/continue is n or N
-        exit(code=None) # exit program
+        lanjut = False # exit program
     else:
         print("invalid")
         exit(code=None) # exit program
